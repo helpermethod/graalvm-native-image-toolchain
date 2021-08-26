@@ -1,1 +1,1 @@
-# GraalVM Native Toolchain Action
+# GraalVM Native Image Toolchain Action
