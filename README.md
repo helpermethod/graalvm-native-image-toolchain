@@ -12,7 +12,7 @@ No more forgetting to install the native-image executable, no more including the
 
 Just include the `GraalVM Native Image Toolchain Action` and run your build tool of choice
 
-```
+```yml
 name: ci
 on: push
 jobs:
