@@ -17,7 +17,37 @@ name: ci
 on: push
 jobs:
   build:
-  - name: Check out repository
-    uses: actions/checkout@v2
-  - name: helpermethod/graalvm-native-image-toolchain@0.0.1
+    runs-on: ubuntu-lastest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v2
+      - name: helpermethod/graalvm-native-image-toolchain@0.0.1
+        with:
+          graalvm-version: 21.2.0.java16
+      - name: Build
+        run: ./mvnw --batch-mode verify 
+```
+
+Works especially well with build matrices
+
+```yml
+name: ci
+on: push
+jobs:
+  assemble:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: os: [ubuntu-latest, macos-latest, windows-latest]
+    steps:
+      steps:
+        - name: Check out repository
+          uses: actions/checkout@v2
+        - name: helpermethod/graalvm-native-image-toolchain@0.0.1
+          with:
+            graalvm-version: 21.2.0.java16
+        - name: Build
+          # the maven.test.skip system property needs to be quoted to work across all platforms
+          run: ./mvnw --batch-mode verify '-Dmaven.test.skip=true'
+
 ```
