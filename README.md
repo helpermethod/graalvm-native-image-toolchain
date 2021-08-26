@@ -30,7 +30,7 @@ Works especially well with build matrices.
 
 ```yml
 jobs:
-  release:
+  build:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
@@ -43,7 +43,5 @@ jobs:
           with:
             graalvm-version: 21.2.0.java16
         - name: Build
-          # the maven.test.skip system property needs to be quoted to work across all platforms
-          run: ./mvnw --batch-mode verify '-Dmaven.test.skip=true'
-
+          run: ./mvnw --batch-mode verify
 ```
