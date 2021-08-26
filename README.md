@@ -30,7 +30,7 @@ Works especially well with build matrices.
 
 ```yml
 jobs:
-  assemble:
+  release:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
