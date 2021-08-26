@@ -1,5 +1,5 @@
 name: graalvm-native-image-toolchain
-description: Install the toolchain for developing GraalVM Native Image applications
+description: Sets up a complete toolchain for developing GraalVM Native Image applications
 inputs:
   graalvm-version:
     required: true
