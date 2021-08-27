@@ -5,8 +5,17 @@ This GitHub Action sets up a complete toolchain for building GraalVM Native Imag
 * GraalVM
 * Native Image
 * Developer Command Prompt for Microsoft Visual C++ (Windows only)
+## Inputs
 
-# Usage
+### `graalvm-version`
+
+**Required** The GraalVM version
+
+### `java-version`
+
+**Required** The Java version
+
+## Usage
 
 Include the `GraalVM Native Image Toolchain Action` and run your build tool of choice.
 
