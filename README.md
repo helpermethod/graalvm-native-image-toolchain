@@ -10,11 +10,9 @@ No more forgetting to install the native-image executable, no more including the
 
 # Usage
 
-Just include the `GraalVM Native Image Toolchain Action` and run your build tool of choice
+Just include the `GraalVM Native Image Toolchain Action` and run your build tool of choice.
 
 ```yml
-name: ci
-on: push
 jobs:
   build:
     runs-on: ubuntu-lastest
@@ -28,13 +26,11 @@ jobs:
         run: ./mvnw --batch-mode verify 
 ```
 
-Works especially well with build matrices
+Works especially well with build matrices.
 
 ```yml
-name: ci
-on: push
 jobs:
-  assemble:
+  build:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
@@ -47,7 +43,5 @@ jobs:
           with:
             graalvm-version: 21.2.0.java16
         - name: Build
-          # the maven.test.skip system property needs to be quoted to work across all platforms
-          run: ./mvnw --batch-mode verify '-Dmaven.test.skip=true'
-
+          run: ./mvnw --batch-mode verify
 ```
