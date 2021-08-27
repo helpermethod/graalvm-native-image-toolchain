@@ -6,17 +6,20 @@ branding:
   color: blue
 inputs:
   graalvm-version:
+    description: The GraalVM version
+    required: true
+  java-version:
+    description: The Java version
     required: true
 
 runs:
   using: composite
   steps:
     - name: Set up GraalVM
-      uses: DeLaGuardo/setup-graalvm@4.0
+      uses: ayltai/setup-graalvm@v1
       with:
-        graalvm-version: {{inputs.graalvm-version}}
-    - name: Install Native Image
-      run: ${{ runner.os == 'Windows' && 'gu.cmd' || 'gu'}} install native-image
+        graalvm-version: ${{ inputs.graalvm-version }}
+        java-version: ${{ inputs.java-version }}
+        native-image: true
     - name: Setup Developer Command Prompt
-      if: ${{ runner.os == 'Windows' }}
       uses: ilammy/msvc-dev-cmd@v1
