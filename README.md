@@ -1,10 +1,11 @@
 # GraalVM Native Image Toolchain
 
-This GitHub Action sets up a complete toolchain for building GraalVM Native Image applications, including
+A GitHub Action to setup a complete toolchain for building GraalVM Native Image applications, including
 
 * GraalVM
 * Native Image
 * Developer Command Prompt for Microsoft Visual C++ (Windows only)
+
 ## Inputs
 
 ### `graalvm-version`
