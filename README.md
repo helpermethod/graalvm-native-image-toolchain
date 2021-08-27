@@ -24,7 +24,7 @@ jobs:
           graalvm-version: 21.2.0
           java-version: 11
       - name: Build
-        run: ./mvnw --batch-mode verify 
+        run: ./mvnw -B verify 
 ```
 
 Works especially well with build matrices.
@@ -45,5 +45,5 @@ jobs:
             graalvm-version: 21.2.0
             java-version: 11
         - name: Build
-          run: ./mvnw --batch-mode verify
+          run: ./mvnw -B verify
 ```
