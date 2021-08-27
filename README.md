@@ -27,7 +27,8 @@ jobs:
     steps:
       - name: Check out repository
         uses: actions/checkout@v2
-      - name: helpermethod/graalvm-native-image-toolchain@0.0.1
+      - name: Set up GraalVM Native Image toolchain
+        uses: helpermethod/graalvm-native-image-toolchain@0.0.1
         with:
           graalvm-version: 21.2.0
           java-version: 11
@@ -48,7 +49,8 @@ jobs:
       steps:
         - name: Check out repository
           uses: actions/checkout@v2
-        - name: helpermethod/graalvm-native-image-toolchain@0.0.1
+        - name: Set up GraalVM Native Image toolchain
+          uses: helpermethod/graalvm-native-image-toolchain@0.0.1
           with:
             graalvm-version: 21.2.0
             java-version: 11
