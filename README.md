@@ -1,6 +1,6 @@
 # GraalVM Native Image Toolchain
 
-A GitHub Action for setting up a GraalVM Native Image toolchain, consisting of
+A GitHub Action for setting up a GraalVM Native Image toolchain consisting of
 
 * GraalVM
 * Native Image
