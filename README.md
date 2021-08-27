@@ -21,7 +21,8 @@ jobs:
         uses: actions/checkout@v2
       - name: helpermethod/graalvm-native-image-toolchain@0.0.1
         with:
-          graalvm-version: 21.2.0.java16
+          graalvm-version: 21.2.0
+          java-version: 11
       - name: Build
         run: ./mvnw --batch-mode verify 
 ```
@@ -41,7 +42,8 @@ jobs:
           uses: actions/checkout@v2
         - name: helpermethod/graalvm-native-image-toolchain@0.0.1
           with:
-            graalvm-version: 21.2.0.java16
+            graalvm-version: 21.2.0
+            java-version: 11
         - name: Build
           run: ./mvnw --batch-mode verify
 ```
