@@ -14,7 +14,7 @@ A GitHub Action for setting up a GraalVM Native Image toolchain consisting of
 
 ### `java-version`
 
-**Required** The Java version
+**Required** The Java version. Currently only 8, 11 and 16.
 
 ## Usage
 
