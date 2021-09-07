@@ -10,7 +10,7 @@ A GitHub Action for setting up a GraalVM Native Image toolchain consisting of
 
 ### `graalvm-version`
 
-**Required** The GraalVM version
+**Required** The GraalVM version.
 
 ### `java-version`
 
