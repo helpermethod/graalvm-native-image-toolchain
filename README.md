@@ -1,6 +1,6 @@
 # GraalVM Native Image Toolchain
 
-[![test](https://github.com/helpermethod/graalvm-native-image-toolchain/workflows/test.yml/badge.svg)](github.com/helpermethod/graalvm-native-image-toolchain/workflows/test.yml)
+[![test](https://github.com/helpermethod/graalvm-native-image-toolchain/actions/workflows/test.yml/badge.svg)](github.com/helpermethod/graalvm-native-image-toolchain/actions/workflows/test.yml)
 
 
 This GitHub Action sets up a collection of tools for building GraalVM Native Image applications, including
