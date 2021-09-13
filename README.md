@@ -6,7 +6,17 @@ This GitHub Action sets up a collection of tools for building GraalVM Native Ima
 * Native Image
 * Developer Command Prompt for Microsoft Visual C++ (Windows only)
 
-# Usage
+## Inputs
+
+### `graalvm-version`
+
+**Required** The GraalVM version.
+
+### `java-version`
+
+**Required** The Java version. Currently only 8, 11 and 16 are supported.
+
+## Usage
 
 Add the `GraalVM Native Image Toolchain Action` to your workflow and run your build tool of choice.
 
@@ -17,12 +27,13 @@ jobs:
     steps:
       - name: Check out repository
         uses: actions/checkout@v2
-      - name: helpermethod/graalvm-native-image-toolchain@0.0.1
+      - name: Set up GraalVM Native Image toolchain
+        uses: helpermethod/graalvm-native-image-toolchain@0.0.1
         with:
           graalvm-version: 21.2.0
           java-version: 11
       - name: Build
-        run: ./mvnw --batch-mode verify 
+        run: ./mvnw -B verify 
 ```
 
 Works especially well with build matrices.
@@ -33,15 +44,16 @@ jobs:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        os: os: [ubuntu-latest, macos-latest, windows-latest]
+        os: [ubuntu-latest, macos-latest, windows-latest]
     steps:
       steps:
         - name: Check out repository
           uses: actions/checkout@v2
-        - name: helpermethod/graalvm-native-image-toolchain@0.0.1
+        - name: Set up GraalVM Native Image toolchain
+          uses: helpermethod/graalvm-native-image-toolchain@0.0.1
           with:
             graalvm-version: 21.2.0
             java-version: 11
         - name: Build
-          run: ./mvnw --batch-mode verify
+          run: ./mvnw -B verify
 ```
