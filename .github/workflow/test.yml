@@ -1,0 +1,21 @@
+name: test
+on: push
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy: [ubuntu-latest, macos-latest, windows-latest]
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v2
+      - name: Set up GraalVM Native Image toolchain
+        uses: helpermethod/graalvm-native-image-toolchain@0.0.1
+        with:
+          graalvm-version: 21.2.0
+          java-version: 11
+      - name: Print Java version
+        run: java --version
+      - name: Print GraalVM
+        run: native-image --version
+      - name: Print cl.exe version
+        if: {{ runner.os == 'Windows' }}
+        run: cl.exe
