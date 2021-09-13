@@ -20,5 +20,5 @@ jobs:
       - name: Print GraalVM
         run: native-image --version
       - name: Print cl.exe version
-        if: {{ runner.os == 'Windows' }}
+        if: runner.os == 'Windows'
         run: cl.exe
