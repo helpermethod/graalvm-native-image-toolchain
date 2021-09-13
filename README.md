@@ -1,5 +1,7 @@
 # GraalVM Native Image Toolchain
 
+![test(https://github.comhelpermethod/graalvm-native-image-toolchain/workflows/test.yml/badge.svg)
+
 This GitHub Action sets up a collection of tools for building GraalVM Native Image applications, including
 
 * GraalVM
