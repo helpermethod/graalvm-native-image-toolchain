@@ -21,7 +21,7 @@ This GitHub Action sets up a collection of tools for building GraalVM Native Ima
 
 ## Usage
 
-Add the `GraalVM Native Image Toolchain Action` to your workflow and run your build tool of choice.
+Add the `graalvm-native-image-toolchain` action to your workflow and run your build tool of choice.
 
 ```yml
 jobs:
