@@ -17,7 +17,7 @@ This GitHub Action sets up a collection of tools for building GraalVM Native Ima
 
 ### `java-version`
 
-**Required** The Java version. Currently only 8, 11 and 16 are supported.
+**Required** The Java version. Currently only 8, 11, 16 and 17 are supported.
 
 ## Usage
 
