@@ -22,4 +22,5 @@ runs:
         java-version: ${{ inputs.java-version }}
         native-image: true
     - name: Set up Developer Command Prompt
+      if: runner.os == 'Windows'
       uses: ilammy/msvc-dev-cmd@v1
